@@ -1,0 +1,33 @@
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="getdoclogin.jsp">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/logologin.png" alt="Avatar" class="avatar">
+    </div>
+
+   <div class="container">
+      <label for="uname"><b>Username</b></label></br>
+      <input type="text" placeholder="Enter Username" name="email" required/></br>
+</label>
+<p></p>
+      <label for="psw"><b>Password</b></label></br>
+      <input type="password" placeholder="Enter Password" name="psw" required/>
+       </label> 
+       <div class="form-group"><label for="psw"><b>Who are you:</b></label>
+                <input type="radio" name="type" value="doctor">Doctor
+                <input type="radio" name="type" value="patient">Patient
+            </div>
+      <button type="submit">Login</button>
+      
+    </div>
+       
+
+         <div class="container" style="background-color:#f1f1f1">
+                <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+                <span class="psw"><a href="#">Forgot password?</a></span>
+            </div>
+  </form>
+</div>

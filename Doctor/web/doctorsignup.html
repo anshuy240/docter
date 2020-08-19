@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!-- Title Page-->
+        <title>Sign Up Form</title>
+
+        <!-- Icons font CSS-->
+        <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+        <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+        <!-- Font special for pages-->
+
+        <!--         <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+        <!-- Vendor CSS-->
+        <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+        <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+        <!-- Main CSS-->
+        <link href="css/main.css" rel="stylesheet" media="all">
+    </head>
+
+    <body>
+        <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+            <div class="wrapper wrapper--w680">
+                <div class="card card-4">
+                    <div class="card-body">
+                        <center> <h1 class="title"><b>Doctor Registration</b></h1></center>
+                        <form  action="getdocregister.jsp" method="POST">
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group" >
+                                        <label class="label">first name</label>
+                                        <span id="docname" class="text-danger font-weight-bold"></span>
+                                        <input class="input--style-4" type="text" name="first_name" placeholder="First name" style="opacity: 0.5" id="fname" required="">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label" id="2">last name</label>
+                                        <input class="input--style-4" type="text" name="last_name" placeholder="Last name" style="opacity: 0.5" id="lname" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label" id="3">Email</label>
+                                        <input class="input--style-4" type="email" name="email" placeholder="Email" style="opacity: 0.5" id="email" required="">
+                                    </div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label" id="4">Gender</label>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">Male
+                                                <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">Female
+                                                <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label" id="5">Create Password</label>
+                                        <input class="input--style-4" type="Password" name="Password" placeholder="Your Password" style="opacity: 0.5" id="pass" required="">
+                                    </div>
+                                </div>
+
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label" id="6">Confirm Password</label>
+                                        <input class="input--style-4" type="Password" name="Password1" placeholder="Confirm Password" style="opacity: 0.5" id="pass1" required="">
+                                    </div>
+                                </div>
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label" id="7">Hospital/Clinic Address</label>
+                                            <input class="input--style-4" type="text" name="address" placeholder="Address" style="opacity: 0.5" id="address" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label" id="8">Mobile Number</label>
+                                            <input class="input--style-4" type="text" name="phone" placeholder="Phone number" style="opacity: 0.5" id="mob" required="">
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="label">Docter Type</label>
+                                        <div class="rs-select2 js-select-simple select--no-search">
+                                            <select name="subject">
+                                                <option disabled="disabled selected="selected">Choose option</option>
+                                                <option>Allopathic</option>
+                                                <option>Homeopathic</option>
+                                                <option>Ayurvedic</option>
+                                            </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                    </br>
+
+                                    <div class="row row-space">
+                                        <div class="col-2">
+                                            <div class="input-group">
+                                                <label class="label" id="9">Qualification</label>
+                                                <input class="input--style-4" type="text" name="text" placeholder="Qualification" style="opacity: 0.5" id="qly">
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group">
+                                            <label class="label" id="10">Specialization</label>
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="special">
+                                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                                    <option>Allergist or Immunologist</option>
+                                                    <option>Anesthesiologist</option>
+                                                    <option>Cardiologist</option>
+                                                    <option>Dermatologist</option>
+                                                    <option>Gastroenterologist</option>
+                                                    <option>Hematologist/Oncologist</option>
+                                                    <option>Internal Medicine Physician</option>
+                                                    <option>Nephrologist</option>
+                                                    <option>Neurologist</option>
+                                                    <option>Neurosurgeon</option>
+                                                    <option>Obstetrician</option>
+                                                    <option>Gynecologist</option>
+                                                    <option>Nurse-Midwifery</option>
+                                                    <option>Occupational Medicine Physician</option>
+                                                    <option>Ophthalmologist</option>
+                                                    <option>Oral and Maxillofacial Surgeon</option>
+                                                    <option>Orthopaedic Surgeon</option>
+                                                    <option>Otolaryngologist </option>
+                                                    <option>Pathologist</option>
+                                                    <option>Pathologist</option>
+                                                    <option>Plastic Surgeon</option>
+                                                    <option>Podiatrist</option>
+                                                    <option>Psychiatrist</option>
+                                                    <option>Pulmonary Medicine Physician</option>
+                                                    <option>Radiation Onconlogist</option>
+                                                    <option>Diagnostic Radiologist</option>
+                                                    <option>Rheumatologist</option>
+                                                    <option>Urologist </option>
+
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row row-space">
+                                            <div class="col-2">
+                                                <div class="input-group">
+                                                    <label class="label" id="11">Medical Experience</label>
+                                                    <input class="input--style-4" type="text" name="exp" placeholder="Experience" style="opacity: 0.5" id="exp">
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="input-group">
+                                                    <label class="label" id="12"> Consultant Fee</label>
+                                                    <input class="input--style-4" type="text" name="confee" placeholder="Fee" style="opacity: 0.5" id="fee">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-2">
+                                                <div class="input-group">
+                                                    <label class="label">Available From</label>
+                                                    <input class="input--style-4" type="time" name="Time1" placeholder="Time" style="opacity: 0.5" id="time1" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-2">
+                                                <div class="input-group">
+                                                    <label class="label">Available To</label>
+                                                    <input class="input--style-4" type="time" name="Time2" placeholder="Time" style="opacity: 0.5" id="time2" required="">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-2">
+                                                Meeting Days
+                                                <pre>MONDAY <input type="checkbox" id="t1" value=""> TUESDAY <input type="checkbox" id="t1" value=""> WEDNESDAY <input type="checkbox" id="t1" value="">
+THURSDAY <input type="checkbox" id="t1" value=""> FRIDAY <input type="checkbox" id="t1" value=""> SATURDAY <input type="checkbox" id="t1" value="">
+SUNDAY <input type="checkbox" value=""></pre>
+                                            </div>
+
+                                            <div class="col-2">
+                                                <div class="p-t-15">
+                                                    <center> <button class="btn btn--radius-2 btn--blue" type="submit" >Submit</button>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                function validation()
+                                {
+                                    var aa = document.getElementById('fname').value;
+                                    var a = document.getElementById('lname').value;
+                                    var b = document.getElementById('pass').value;
+                                    var c = document.getElementById('pass1').value;
+                                    var d = document.getElementById('address').value;
+                                    var e = document.getElementById('mob').value;
+                                    var f = document.getElementById('qly').value;
+                                    var g = document.getElementById('exp').value;
+                                    var h = document.getElementById('fee').value;
+
+                                    if (aa == "") {
+                                        document.getElementById('docname').innerHTML = "**please inter name";
+                                        return false;
+                                    }
+                                    if ((aa.length <= 2) || (aa.length > 20))
+                                    {
+                                        document.getElementById('docname').innerHTML = "**please inter valid length";
+                                        return false;
+                                    }
+                                    if (!isNaN(aa))
+                                    {
+                                        document.getElementById('docname').innerHTML = "**only character allowed";
+                                        return false;
+                                    }
+
+                                    if (a == "") {
+                                        document.getElementById('user').innerHTML = "**please inter userid";
+                                        return false;
+                                    }
+
+                                    if (b == "") {
+                                        document.getElementById('dob1').innerHTML = "**please inter date of birth";
+                                        return false;
+                                    }
+
+                                    if (c == "") {
+                                        document.getElementById('male1').innerHTML = "**please inter gender";
+                                        return false;
+                                    }
+
+                                    if (d == "") {
+                                        document.getElementById('female1').innerHTML = "**please inter gender";
+                                        return false;
+                                    }
+
+                                    if (e == "") {
+                                        document.getElementById('pass').innerHTML = "**please inter password ";
+                                        return false;
+                                    }
+                                    if ((e.length <= 5) || (e.length > 20))
+                                    {
+                                        document.getElementById('pass').innerHTML = "**please inter between 5 to 20";
+                                        return false;
+                                    }
+                                    if (e != f)
+                                    {
+                                        document.getElementById('pass').innerHTML = "**password are not matched";
+                                        return false;
+                                    }
+                                    if (f == "") {
+                                        document.getElementById('conpass').innerHTML = "**please inter confirm password";
+                                        return false;
+                                    }
+                                    if (e != f)
+                                    {
+                                        document.getElementById('pass').innerHTML = "**password are not matched";
+                                        return false;
+                                    }
+
+                                    if (g == "") {
+                                        document.getElementById('add1').innerHTML = "**please inter address";
+                                        return false;
+                                    }
+
+                                    if (h == "") {
+                                        document.getElementById('mob1').innerHTML = "**please inter Mobile";
+                                        return false;
+                                    }
+                                    if (isNaN(h))
+                                    {
+                                        document.getElementById('mob1').innerHTML = "**please inter digit not charector";
+                                        return false;
+                                    }
+                                    if (h.length != 10)
+                                    {
+                                        document.getElementById('mob1').innerHTML = "**please inter 10 digit";
+                                        return false;
+                                    }
+
+                                    if (i == "") {
+                                        document.getElementById('email1').innerHTML = "**please inter email";
+                                        return false;
+                                    }
+                                    /* if(i.indexof('@')<=0)
+                                     {
+                                     document.getElementById('email1').innerHTML="**invalid @ position";
+                                     return false;
+                                     }
+                                     if(i.chatAt(i.length-4)!='.')&&(i.chatAt(i.length-3)!='.')
+                                     {
+                                     document.getElementById('email1').innerHTML="**invalid . position";
+                                     return false;
+                                     }
+                                     */
+                                }
+                            </script>
+
+                            <!-- Jquery JS-->
+                            <script src="vendor/jquery/jquery.min.js"></script>
+                            <!-- Vendor JS-->
+                            <script src="vendor/select2/select2.min.js"></script>
+                            <script src="vendor/datepicker/moment.min.js"></script>
+                            <script src="vendor/datepicker/daterangepicker.js"></script>
+
+                            <!-- Main JS-->
+                            <script src="js/global.js"></script>
+
+                            </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+                            </html>
+                            <!-- end document-->

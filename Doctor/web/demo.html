@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello Doctors login</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ---------------------CSS for login and registration form-----------------------------      
+ -->
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0; 
+  border-radius: 30%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+ 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+<!-- -----------------------------------------------------------------------------------
+ -->
+</head>
+<body class="single-page">
+    <header class="site-header">
+        <div class="nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+                        <div class="site-branding d-flex align-items-center">
+                            <a class="d-block" href="index.html" rel="home"><img src="a.png"/></a>
+                        </div><!-- .site-branding -->
+                       <!-------------- --------------------registration boc-------------------------- -->
+
+                        <div id="head_c2">
+                           <button onclick="document.getElementById('id02').style.display='block'" style="width:auto; top:0px;">
+                            Register</button>
+                           <div id="id02" class="modal">
+                             <form class="modal-content animate" action="">
+                             <div class="imgcontainer">
+                             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                             </div>
+                             <div class="container">
+                             <div class="row">
+                             <div class="col-12 col-md-6 col-lg-3" style="margin-left: 100px;">
+                             <div class="medical-team-wrap">
+
+                             <a href="doctorsignup.html" style="text-decoration: none;"><img src="images/team-2.jpg" alt="">
+                             <h3 style=color:blue;>Doctors Regstration</h3></a>                    
+                             </div>
+                             </div>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                        <div class="medical-team-wrap">
+                        <a href="patientsignup.html" style="text-decoration: none;"> <img src="images/team-1.jpg" alt="">
+                       <h3 style=color:blue;>Patients Registration</h3></a>
+                    
+                                </div>
+                               </div>
+                              </div>
+
+                             </div>
+
+                             </form>
+                             </div>
+
+                             <script>
+                             var modal = document.getElementById('id02');
+
+                             window.onclick = function(event) {
+                             if (event.target == modal) {
+                             modal.style.display = "none";
+                                }
+                                }
+                             </script>
+
+<!-- ----------------------------------------------------- -->
+                                    
+                                    
+                            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto; top:0px; margin: 3PX;">Login</button>
+
+<!-- ------------------------------login box---------------------------------------
+ -->
+                             <div id="id01" class="modal">
+                             <form class="modal-content animate" action="">
+                             <div class="imgcontainer">
+                             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                             <img src="dd.png" alt="Avatar" class="avatar">
+                             </div>
+
+                             <div class="container">
+                             <label for="uname"><b>Username</b></label>
+                             <input type="text" placeholder="Enter Username" name="uname" required>
+
+                             <label for="psw"><b>Password</b></label>
+                             <input type="password" placeholder="Enter Password" name="psw" required>
+                                        
+                             <button type="submit">Login</button>
+                             <label>
+                             <input type="checkbox" checked="checked" name="remember"> Remember me
+                             </label>
+                             </div>
+
+                             <div class="container" style="background-color:#f1f1f1">
+                             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                             <span class="psw">Forgot <a href="#">password?</a></span>
+                             </div>
+                             </form>
+                             </div>
+
+                             <script>
+                                // Get the modal
+                             var modal = document.getElementById('id01');
+
+                                // When the user clicks anywhere outside of the modal, close it
+                             window.onclick = function(event) {
+                             if (event.target == modal) {
+                             modal.style.display = "none";
+                                }
+                                }
+                             </script>
+                      </div>
+<!-- ---------------------------------------------------------------------------------------------------
+ -->                            
+                        <nav class="site-navigation d-flex justify-content-end align-items-center">
+                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-center">
+                                <li class="current-menu-item"><a href="demo.html">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Book Appointment</a></li>
+                                <li><a href="#">Contact</a></li>
+								<li><a href="#">news</a></li>
+
+                            </ul>
+                        </nav><!-- .site-navigation -->
+
+                        <div class="hamburger-menu d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div><!-- .hamburger-menu -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .nav-bar -->
+
+       
+
+        <img class="header-img" src="images/about-bg.png" alt="">
+    </header><!-- .site-header -->
+    <div class="medical-team">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="medical-team-wrap">
+                        <a href="loginPopup.html"><img src="images/team-2.jpg" alt="">
+                        <h3 style=color:blue;>Login Doctors</h3></a>                    
+                    </div>
+                </div>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+                    <div class="medical-team-wrap">
+                        <a href="loginPopup.html"> <img src="images/team-1.jpg" alt="">
+                       <h3 style=color:blue;>Login Patients</h3></a>
+                    
+                    </div>
+                </div>
+		   
+            </div>
+        </div>
+    </div>
+	
+
+   
+
+   <footer class="site-footer">
+        <div class="footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="foot-about">
+                            <h2><a href="#" style="color:blue"><img src="a.png"/></a></h2>
+
+                            <p></p>
+                        </div><!-- .foot-about -->
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                        <div class="foot-contact">
+                            <h2>Contact</h2>
+
+                            <ul class="p-0 m-0">
+                                <li><span>Addtress:</span>Maulana Azad National Institute Of Technology</li>
+                                <li><span>Phone:</span>+917417589735</li>
+                                <li><span>Email:</span>anshuy240@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div><!-- .col -->
+
+                    <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+                        <div class="foot-links">
+                            <h2>Usefull Links</h2>
+
+                            <ul class="p-0 m-0">
+                                <li><a href="demo.html">Home</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Book Appointment</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">news</a></li>
+					
+                            </ul>
+                        </div><!-- .foot-links -->
+                    </div><!-- .col -->
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .footer-widgets -->
+    </footer><!-- .site-footer -->
+
+</body>
+</html>

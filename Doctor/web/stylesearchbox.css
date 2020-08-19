@@ -1,0 +1,67 @@
+/*------------------------------------------Search box css---------------------------------*/
+body
+    {
+      margin: o;
+      padding: 0;
+    }
+   .header
+    {
+      height: 40vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(tt.jpg);
+    }
+    h1
+    {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 70px;
+      font-size: 45px;
+      letter-spacing: 2px;
+
+    }
+    span
+    {
+      color: #f44336;
+    }
+    .search-field
+    {
+      height: 30px;
+      padding: 8px;
+    }
+   /* .skills
+    {
+      width: 50px;
+
+    }
+    .location
+    {
+      width: 50px;
+    }*/
+    .search-btn
+    {
+      height: 50px;
+      width: 80px;
+      background:#f44336;
+      border:none;
+      color: #fff;
+      padding: center;
+
+    }
+    .search-btn:hover
+    {
+      background:#bb0d00;
+      cursor: pointer;
+      
+    }
+    .form-box
+    {
+      background:rgba(255,255,255,0.5);
+      padding: 50px 80px;
+    }
+
+/*----------------------------------------------------------------------------------------*/

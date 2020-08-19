@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Doctor's Sign Up</title>
+<link rel="stylesheet" a href="signup.css">
+<link rel="stylesheet" a href="DoctorsOnClick\f\css\font-awesome.min.css">
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+
+
+<style type="text/css">
+      body{
+      background-image:url("images/tt.jpg");
+}
+.wrap{
+      width: 450px;
+      margin: auto;
+      margin-top: 60px;
+      background-color: skyblue;
+      padding: 5px;
+      font-family: verdana;
+      border-radius: 15px;
+      
+}
+form{
+      font-family: verdana;
+      border:1.5px deepskyblue;
+      margin: 10px;
+      border-radius: 15px;
+
+}
+h1{
+      text-align: center;
+      background:white;
+      color:Maroon ;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: bold;
+}
+input{
+      padding: 10px;
+      margin: 5px;
+    border-radius: 5px;
+    border:none;
+}
+input[type=text],input[type=number],input[type=password],input[type=Email]{
+       width: 90%;
+}
+input[type=submit]{
+      width: 95%;
+      background:darkred;
+      cursor:pointer; 
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+}
+input[type=submit]:hover{
+      background:green;
+}
+
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<form action="" onsubmit="return validation()">
+			<h1>Doctor's Sign Up</h1>
+		<input type="text" name="First Name" placeholder="Doctor Name"id="pname" ><br>
+            <span id="patname" class="text-danger font-weight-bold"></span>
+            <input type="text" name="text" placeholder="User ID" id="userid"><br> 
+            <span id="user" class="text-danger font-weight-bold"></span>
+           &nbsp; <b>DOB:<input type="date" name="Date Of Birth" placeholder= "Date Of Birth" id="dob">
+                  <span id="dob1" class="text-danger font-weight-bold"></span><br>
+            <input type="radio" name="gender" value="male" id="male" ><b>Male
+                  <span id="male1" class="text-danger font-weight-bold"></span>
+            <input type="radio" name="gender" value="Female"id="female"><b>Female
+                  <span id="female1" class="text-danger font-weight-bold"></span>
+            <br>
+            <input type="password" name="password" placeholder="Password"id="pass1">
+            <span id="pass" class="text-danger font-weight-bold"></span>
+            <input type="password" name=" confirm password" placeholder=" Confirm Password" id="pass2"><br>
+            <span id="conpass" class="text-danger font-weight-bold"></span>
+            <input type="text" name="address" placeholder="Address" id="add"><br>
+            <span id="add1" class="text-danger font-weight-bold"></span>
+             <input type="number" name="Mobile No." placeholder="Mobile No."id="mob"><br>
+             <span id="mob1" class="text-danger font-weight-bold"></span>
+             <input type="Email" name="mail" id="email"placeholder="Enter your Email"id="email"><br>
+             <span id="email1" class="text-danger font-weight-bold"></span>
+             <input type="checkbox"><b>I Agree To The Terms Of Use<br><br>
+             <input type="submit" value="Submit Now" >
+
+
+<script type="text/javascript">
+      function validation()
+      {
+         var pname=document.getElementById('pname').value;
+         var a=document.getElementById('userid').value;
+         var b=document.getElementById('dob').value;
+         var c=document.getElementById('male').value;
+         var d=document.getElementById('female').value;
+         var e=document.getElementById('pass1').value;
+         var f=document.getElementById('pass2').value;
+         var g=document.getElementById('add').value;
+         var h=document.getElementById('mob').value;
+         var i=document.getElementById('email').value;
+         if(pname==""){
+            document.getElementById('patname').innerHTML="**please inter name";
+            return false;
+         }
+         if((pname.length<=2)||(pname.length>20))
+         {
+           document.getElementById('patname').innerHTML="**please inter valid length";
+            return false; 
+         }
+         if(!isNaN(pname))
+         {
+            document.getElementById('patname').innerHTML="**only character allowed";
+            return false;
+         }
+
+         if(a==""){
+            document.getElementById('user').innerHTML="**please inter userid";
+            return false;
+         }
+
+         if(b==""){
+            document.getElementById('dob1').innerHTML="**please inter date of birth";
+            return false;
+         }
+
+         if(c==""){
+            document.getElementById('male1').innerHTML="**please inter gender";
+            return false;
+         }
+
+         if(d==""){
+            document.getElementById('female1').innerHTML="**please inter gender";
+            return false;
+         }
+
+         if(e==""){
+            document.getElementById('pass').innerHTML="**please inter password ";
+            return false;
+         }
+          if((e.length<=5)||(e.length>20))
+         {
+           document.getElementById('pass').innerHTML="**please inter between 5 to 20";
+            return false; 
+         }
+         if(e!=f)
+         {
+            document.getElementById('pass').innerHTML="**password are not matched";
+            return false;
+         }
+         if(f==""){
+            document.getElementById('conpass').innerHTML="**please inter confirm password";
+            return false;
+         }
+ if(e!=f)
+         {
+            document.getElementById('pass').innerHTML="**password are not matched";
+            return false;
+         }
+
+         if(g==""){
+            document.getElementById('add1').innerHTML="**please inter address";
+            return false;
+         }
+
+         if(h==""){
+            document.getElementById('mob1').innerHTML="**please inter Mobile";
+            return false;
+         }
+         if(isNaN(h))
+         {
+             document.getElementById('mob1').innerHTML="**please inter digit not charector";
+            return false;
+         }
+         if(h.length!=10)
+         {
+             document.getElementById('mob1').innerHTML="**please inter 10 digit";
+            return false;
+         }
+
+
+         if(i==""){
+            document.getElementById('email1').innerHTML="**please inter email";
+            return false;
+         }
+          /* if(i.indexof('@')<=0)
+         {
+            document.getElementById('email1').innerHTML="**invalid @ position";
+            return false;
+         }
+         if((i.chatAt(i.length-4)!='.')&&(i.chatAt(i.length-3)!='.'))
+         {
+            document.getElementById('email1').innerHTML="**invalid . position";
+            return false;
+         }
+*/
+
+      }
+</script>
+
+</body>
+</html>
